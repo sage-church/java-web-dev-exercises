@@ -1,8 +1,8 @@
-package exercises;
+package exercises.basics;
 
 import java.util.Scanner;
 
-public class TextSearch {
+public class TextSearch2 {
 
     public static void main(String[] args) {
 
@@ -19,9 +19,22 @@ public class TextSearch {
 
         String wordToSearch = input.nextLine().toLowerCase();
 
-        String result = lowerCaseSentence.contains(wordToSearch) ? "true" : "false";
+        if (lowerCaseSentence.contains(wordToSearch)) {
 
-        System.out.println(result);
+            int indexOfWord = lowerCaseSentence.indexOf(wordToSearch);
+            int lengthOfWord = wordToSearch.length();
+            String newSentence = lowerCaseSentence.replace(wordToSearch, "");
+
+            System.out.println("This string of characters is at index " + indexOfWord + " within the stored" +
+                    " sentence and has a length of " + lengthOfWord + " characters.");
+
+            System.out.println(newSentence);
+
+        } else {
+
+            System.out.println("The stored sentence does not contain this string of characters.");
+
+        }
 
     }
 
