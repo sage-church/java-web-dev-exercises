@@ -1,6 +1,7 @@
 package exercises.controlFlowAndCollections;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class ArrayListPractice {
 
@@ -14,7 +15,21 @@ public class ArrayListPractice {
 
         System.out.println(sumOfEvens(integerList));
 
+//        --------------------------------------
+
+        ArrayList<String> stringList = new ArrayList<>();
+        stringList.add("sometimes");
+        stringList.add("five");
+        stringList.add("stack");
+        stringList.add("house");
+        stringList.add("little");
+        stringList.add("ghost");
+
+        printFiveLetterWords(stringList);
+
     }
+
+//    --------------------------------------------
 
     public static int sumOfEvens(ArrayList<Integer> integerList) {
 
@@ -26,6 +41,26 @@ public class ArrayListPractice {
             }
         }
         return sum;
+    }
+
+//    ------------------------------------------
+
+    public static void printFiveLetterWords(ArrayList<String> wordList) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter the number of characters the printed words should have:");
+
+        int wordLengthRequested = input.nextInt();
+
+        for (String word : wordList) {
+
+            if (word.length() == wordLengthRequested) {
+                System.out.println(word);
+            }
+
+        }
+
     }
 
 }
