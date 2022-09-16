@@ -1,4 +1,4 @@
-package org.launchcode.java.studios.areaofacircle;
+package org.launchcode.java.studios.areaOfCircle;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
